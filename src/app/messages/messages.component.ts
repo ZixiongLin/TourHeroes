@@ -8,9 +8,13 @@ import {MessageService} from '../message.service'
 })
 export class MessagesComponent implements OnInit {
 
+  showMessages:boolean = false;
+
   constructor(public messageService: MessageService) { }
 
   ngOnInit(): void {
   }
-
+  showMessage():void{
+    this.showMessages = !this.showMessages
+  }
 }
